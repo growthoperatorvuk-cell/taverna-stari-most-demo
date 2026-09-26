@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Taverna Stari Most — restoran u Vrbasu | riba, roštilj, sač, sushi</title>
+<meta name="description" content="Taverna Stari Most, Vrbas — roštilj i ražanj, sač, rečna i morska riba, sushi subotom, svirke. Rezervacije 062/22-42-42. Online poručivanje i dostava.">
+<meta property="og:title" content="Taverna Stari Most — Vrbas">
+<meta property="og:description" content="Tradicija i moderna kuhinja, na obali kanala. Rezervacije 062/22-42-42.">
+<meta property="og:type" content="restaurant">
+<meta name="theme-color" content="#0e0c0a">
+<!-- DEMO: ukloniti noindex kad vlasnik odobri i sajt ide na njihov domen -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Taverna Stari Most","telephone":"+381622224242","email":"info@tavernastarimost.rs",
+"address":{"@type":"PostalAddress","streetAddress":"Ise Sekickog 33","postalCode":"21460","addressLocality":"Vrbas","addressCountry":"RS"},
+"geo":{"@type":"GeoCoordinates","latitude":45.570072,"longitude":19.654779},
+"openingHours":"Mo-Su 08:00-22:30","servesCuisine":["Serbian","Mediterranean","Seafood","Sushi"],
+"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"133"}}
+</script>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a href="#top" class="brand" aria-label="Taverna Stari Most">
+    <span class="brand-small">Taverna</span>
+    <span class="brand-big">Stari Most</span>
+  </a>
+  <nav class="nav-links">
+    <a href="#specijaliteti" data-t="navSpecial">Specijaliteti</a>
+    <a href="#meni" data-t="navMenu">Meni</a>
+    <a href="#sefov-meni" data-t="navChef">Šefov meni</a>
+    <a href="#dogadjaji" data-t="navEvents">Svirke</a>
+    <a href="#kontakt" data-t="navContact">Kontakt</a>
+  </nav>
+  <div class="nav-actions">
+    <button class="lang" id="lang" aria-label="Promeni jezik">EN</button>
+    <a class="btn btn-ghost hide-sm" data-order data-t="order">Poruči online</a>
+    <a class="btn btn-solid" href="#rezervacija" data-t="reserve">Rezerviši</a>
+  </div>
+</header>
+
+<!-- ============ OBILAZAK: jedan svajp = jedna scena (snimci sa terena + AI prelazi) ============ -->
+<section class="tour" id="top">
+  <div class="tour-stage">
+    <img class="bg-still" id="bgStill" alt="" aria-hidden="true">
+    <div class="screen" id="screen">
+      <img class="still" id="still" alt="">
+      <video class="vid" id="vid" muted playsinline preload="auto" aria-hidden="true"></video>
+    </div>
+    <div class="shade"></div>
+    <div class="captions" id="captions"></div>
+    <ol class="scene-map" id="sceneMap" aria-label="Scene"></ol>
+    <div class="progress"><i id="progressBar"></i></div>
+    <button class="next-btn" id="nextBtn" aria-label="Dalje"><span id="hintText"></span><i></i></button>
+    <a class="skip" href="#specijaliteti" data-t="skip">Preskoči</a>
+  </div>
+</section>
+
+<!-- ============ UVOD ============ -->
+<section class="intro wrap">
+  <p class="eyebrow" data-t="introEyebrow">O nama</p>
+  <p class="intro-text" data-t="introText">Roštilj i ražanj, jela ispod sača, sveža rečna i morska riba i internacionalne kreacije — od pažljivo biranih namirnica. Ne dolazite samo na ručak. Dolazite na veče koje ćete poželeti da ponovite.</p>
+  <div class="facts">
+    <a class="fact" id="rating" target="_blank" rel="noopener">
+      <strong><span data-site="ratingScore"></span><span class="star">★</span></strong>
+      <span data-site="ratingLabel"></span>
+    </a>
+    <div class="fact"><strong>08–22:30</strong><span data-t="factHours">svaki dan</span></div>
+    <div class="fact"><strong>280 RSD</strong><span data-t="factDelivery">dostava po Vrbasu</span></div>
+  </div>
+</section>
+
+<!-- ============ SPECIJALITETI ============ -->
+<section class="special" id="specijaliteti">
+  <div class="wrap">
+    <p class="eyebrow" data-t="specialEyebrow">Specijaliteti kuće</p>
+    <h2 data-t="specialTitle">Ono zbog čega se vraćaju</h2>
+  </div>
+  <div class="special-rail" id="specialRail"></div>
+</section>
+
+<!-- ============ ŠEFOV MENI ============ -->
+<section class="chef" id="sefov-meni">
+  <div class="wrap chef-inner">
+    <aside class="chef-card rv">
+      <img class="chef-photo" id="chefImg" alt="" width="150" height="150">
+      <p class="eyebrow" data-t="chefEyebrow">Šefov meni · najava 24h</p>
+      <h2 data-t="chefTitle">Za stolom, pred vama</h2>
+      <p class="chef-name" id="chefName"></p>
+      <p class="muted" data-site="chefIntro"></p>
+      <a class="btn btn-solid btn-lg" href="#rezervacija" id="chefCta" data-t="chefCta">Najavi šefov meni</a>
+    </aside>
+    <div class="chef-list" id="chefList"></div>
+  </div>
+</section>
+
+<!-- ============ MENI ============ -->
+<section class="menu wrap" id="meni">
+  <div class="menu-head">
+    <div>
+      <p class="eyebrow" data-t="menuEyebrow">Jelovnik</p>
+      <h2 data-t="menuTitle">Meni</h2>
+    </div>
+    <label class="search">
+      <input id="menuSearch" type="search" placeholder="Pretraži jelo…" data-t-placeholder="searchPh">
+    </label>
+  </div>
+  <div class="tabs" id="menuTabs" role="tablist"></div>
+  <div class="menu-list" id="menuList"></div>
+  <p class="menu-note" data-t="menuNote">Imate alergiju ili posebnu ishranu? Recite nam — prilagodićemo.</p>
+</section>
+
+<!-- ============ DOGAĐAJI ============ -->
+<section class="events" id="dogadjaji">
+  <div class="wrap">
+    <div class="events-layout">
+      <div>
+        <p class="eyebrow" data-t="eventsEyebrow">Svirke i događaji</p>
+        <h2 data-t="eventsTitle">Večeri uz muziku</h2>
+        <div class="event-grid" id="eventGrid"></div>
+      </div>
+      <figure class="events-photo rv" id="eventsPhoto"><img alt="" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AMBIJENT (prikazuje se kad data.js → gallery ima slike) ============ -->
+<section class="gallery wrap" id="ambijent" hidden>
+  <p class="eyebrow" data-t="galleryEyebrow">Ambijent</p>
+  <h2 data-t="galleryTitle">Pogled koji se pamti</h2>
+  <div class="gallery-grid" id="galleryGrid"></div>
+</section>
+
+<!-- ============ REZERVACIJA ============ -->
+<section class="reserve" id="rezervacija">
+  <div class="wrap reserve-inner">
+    <div>
+      <p class="eyebrow" data-t="reserveEyebrow">Rezervacija</p>
+      <h2 data-t="reserveTitle">Sačuvaćemo vam sto</h2>
+      <p class="muted" data-t="reserveText">Pošaljite upit — potvrdićemo porukom ili pozivom. Za danas najbrže je da pozovete.</p>
+      <a class="big-phone" data-tel></a>
+    </div>
+    <form class="form" id="reserveForm">
+      <label><span data-t="fName">Ime</span><input name="ime" required autocomplete="name"></label>
+      <div class="row">
+        <label><span data-t="fDate">Datum</span><input name="datum" type="date" required></label>
+        <label><span data-t="fTime">Vreme</span><input name="vreme" type="time" min="08:00" max="22:00" required></label>
+        <label><span data-t="fPeople">Osoba</span><input name="osoba" type="number" min="1" max="60" value="2" required></label>
+      </div>
+      <label><span data-t="fNote">Napomena</span><input name="napomena" placeholder="rođendan, bašta, alergije…" data-t-placeholder="fNotePh"></label>
+      <div class="form-actions">
+        <button class="btn btn-solid btn-lg" type="submit" data-t="sendWa">Pošalji na WhatsApp</button>
+        <button class="btn btn-ghost btn-lg" type="button" id="sendSms" data-t="sendSms">Pošalji SMS</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ============ KONTAKT ============ -->
+<section class="contact wrap" id="kontakt">
+  <div class="contact-info">
+    <p class="eyebrow" data-t="contactEyebrow">Gde smo</p>
+    <h2 data-t="contactTitle">Dođite na Stari most</h2>
+    <dl>
+      <dt data-t="address">Adresa</dt><dd data-site="address"></dd>
+      <dt data-t="hours">Radno vreme</dt><dd data-site="hours"></dd>
+      <dt data-t="delivery">Dostava</dt><dd data-site="delivery"></dd>
+      <dt data-t="phone">Telefon</dt><dd><a data-tel></a></dd>
+    </dl>
+    <div class="socials">
+      <a data-link="instagram" target="_blank" rel="noopener">Instagram</a>
+      <a data-link="facebook" target="_blank" rel="noopener">Facebook</a>
+      <a data-link="sister" target="_blank" rel="noopener" data-site="sisterName"></a>
+    </div>
+  </div>
+  <iframe class="map" id="map" loading="lazy" title="Mapa" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <span>© <span id="year"></span> Taverna Stari Most · Vrbas</span>
+    <a data-order data-t="order">Poruči online</a>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a data-tel-short class="btn btn-ghost" data-t="call">Pozovi</a>
+  <a data-order class="btn btn-ghost" data-t="orderShort">Poruči</a>
+  <a href="#rezervacija" class="btn btn-solid" data-t="reserve">Rezerviši</a>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
