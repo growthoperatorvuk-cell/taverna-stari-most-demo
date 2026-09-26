@@ -157,7 +157,7 @@
   /* ================= OBILAZAK: jedan svajp = jedna scena ================= */
   const SC = S.scenes, N = SC.length, TR = S.tour;
   const tour = $(".tour"), still = $("#still"), bgStill = $("#bgStill"), vid = $("#vid");
-  const clip = (k, d) => `${TR.dir}${d}${k}.mp4`, stillSrc = j => `${TR.dir}s${j}.webp`;
+  const clip = (k, d) => `${TR.dir}${d}${k}.mp4?v=${TR.v || 1}`, stillSrc = j => `${TR.dir}s${j}.webp?v=${TR.v || 1}`;
   let cur = 0, busy = false, caps = [], dots = [];
 
   function renderBeats() { // ime zadržano: poziva ga applyLang pri promeni jezika

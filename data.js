@@ -18,7 +18,7 @@ window.SITE = {
 
   // Obilazak: kadrovi sa terena (26.09.2026), sređeni u Higgsfield-u (GPT Image 2.5), prelazi Kling 3.0 pro.
   // video/pK.mp4 = scena K-1 → K, video/nK.mp4 = unazad, video/sK.webp = mirni kadar scene K.
-  tour: { dir: "video/", rate: 1.5 },
+  tour: { dir: "video/", rate: 1.5, v: 3 },
   scenes: [
     { label: { sr: "Ise Sekickog 33 · Vrbas", en: "Ise Sekickog 33 · Vrbas" }, hero: true,
       title: { sr: "Taverna<br><em>Stari Most</em>", en: "Taverna<br><em>Stari Most</em>" },
