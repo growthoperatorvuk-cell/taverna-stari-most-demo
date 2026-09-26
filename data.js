@@ -26,11 +26,8 @@ window.SITE = {
     { label: { sr: "Terasa", en: "The terrace" },
       title: { sr: "Veče pod<br><em>toplim svetlima.</em>", en: "Evenings under<br><em>warm lights.</em>" },
       text: { sr: "Pravo kroz sredinu terase, do kliznih vrata.", en: "Straight through the terrace, to the sliding doors." } },
-    { label: { sr: "Sala", en: "The hall" },
+    { label: { sr: "Sala", en: "The hall" }, end: true,
       title: { sr: "Pod drvenim<br><em>gredama.</em>", en: "Under the<br><em>wooden beams.</em>" },
-      text: { sr: "Luster, drvo i šank — prva sala.", en: "Chandelier, wood and the bar — the first hall." } },
-    { label: { sr: "Za vaše društvo", en: "For your company" }, end: true,
-      title: { sr: "Toplo, kao<br><em>kod kuće.</em>", en: "Warm, like<br><em>at home.</em>" },
       text: { sr: "Svaki dan 08:00 – 22:30<br>Rezervacije 062 / 22-42-42", en: "Every day 08:00 – 22:30<br>Bookings 062 / 22-42-42" } }
   ],
 
