@@ -23,21 +23,15 @@ window.SITE = {
     { label: { sr: "Ise Sekickog 33 · Vrbas", en: "Ise Sekickog 33 · Vrbas" }, hero: true,
       title: { sr: "Taverna<br><em>Stari Most</em>", en: "Taverna<br><em>Stari Most</em>" },
       text: { sr: "Tradicija i moderna kuhinja, na obali kanala.", en: "Tradition meets modern cuisine, by the canal." } },
-    { label: { sr: "Taverna", en: "The Taverna" },
-      title: { sr: "Tradicija i<br><em>moderna kuhinja.</em>", en: "Tradition meets<br><em>modern cuisine.</em>" },
-      text: { sr: "Specijaliteti sa roštilja, jela ispod sača, sveža riba i internacionalne kreacije.", en: "Grill specialties, dishes under the sač, fresh fish and international plates." } },
     { label: { sr: "Terasa", en: "The terrace" },
       title: { sr: "Veče pod<br><em>toplim svetlima.</em>", en: "Evenings under<br><em>warm lights.</em>" },
-      text: { sr: "Terasa uz baštu — za ručak, večeru i svirke.", en: "A terrace by the garden — for lunch, dinner and live music." } },
+      text: { sr: "Uđite pravo kroz sredinu terase — do kliznih vrata.", en: "Walk straight through the terrace — to the sliding doors." } },
     { label: { sr: "Sala", en: "The hall" },
       title: { sr: "Pod drvenim<br><em>gredama.</em>", en: "Under the<br><em>wooden beams.</em>" },
-      text: { sr: "Luster, drvo i staklo prema bašti — mesta i za veće društvo.", en: "Chandelier, wood and glass toward the garden — room for bigger groups too." } },
-    { label: { sr: "Za vaše društvo", en: "For your company" },
+      text: { sr: "Luster, drvo i šank — prva sala odmah do terase.", en: "Chandelier, wood and the bar — the first hall right off the terrace." } },
+    { label: { sr: "Za vaše društvo", en: "For your company" }, end: true,
       title: { sr: "Toplo, kao<br><em>kod kuće.</em>", en: "Warm, like<br><em>at home.</em>" },
-      text: { sr: "Mirniji deo sale za porodične ručkove i večere udvoje.", en: "A quieter room for family lunches and dinners for two." } },
-    { label: { sr: "Bašta", en: "The garden" }, end: true,
-      title: { sr: "Dobro<br><em>došli.</em>", en: "You're<br><em>welcome.</em>" },
-      text: { sr: "Svaki dan 08:00 – 22:30 · rezervacije 062 / 22-42-42", en: "Every day 08:00 – 22:30 · bookings 062 / 22-42-42" } }
+      text: { sr: "Svaki dan 08:00 – 22:30<br>Rezervacije 062 / 22-42-42", en: "Every day 08:00 – 22:30<br>Bookings 062 / 22-42-42" } }
   ],
 
   // img: privremeno sa njihovog Instagrama (640px) — zameniti profi fotkama
